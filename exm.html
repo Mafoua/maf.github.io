@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .gif-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .login-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 800px; /* Ajustez la largeur du GIF ici */
+    width: 100%; /* Utilisez 100% pour couvrir la largeur du GIF */
+    z-index: 1;
+    color: #fff;
+  }
+
+  .login-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #888;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #fff;
+  }
+
+  .btn-connect {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .button-md {
+    padding: 12px 20px;
+  }
+
+  .button-outline {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+  }
+
+  .button-outline-md {
+    font-size: 14px;
+  }
+
+  .button-block {
+    width: 100%;
+    display: block;
+  }
+
+  .button-block-md {
+    font-size: 16px;
+  }
+
+  .button-outline-md-light {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .button-outline-md-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .text-input {
+    border: none;
+    border-bottom: 1px solid #888;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .text-input-md {
+    font-size: 16px;
+  }
+  position: absolute;
+    top: 20px; /* Ajustez la position verticale de l'icône */
+    left: 50%; /* Centrez l'icône horizontalement */
+    transform: translateX(-50%); /* Ajustez pour centrer l'icône exactement */
+    width: 60px; /* Ajustez la taille de l'icône */
+    height: 60px;
+    z-index: 2; /* Placez l'icône au-dessus du GIF de fond */
+</style>
+<script>
+  function loginUser() {
+    // Ici, vous pouvez implémenter votre logique de connexion
+    // Par exemple, vérification du nom d'utilisateur et du mot de passe
+    // Si les informations sont valides, vous pouvez rediriger l'utilisateur
+    // vers la page suivante :
+    window.location.href = "page-apres-connexion.html";
+  }
+</script>
+<title>Page d'Accueil avec GIF en Arrière-plan</title>
+</head>
+<body>
+<img class="gif-background" src="airmont.gif" alt="Background GIF">
+<img class="company-icon" src="airmont_transparent.png" alt="Company Icon">
+<div class="login-container">
+  <h2>Connexion</h2>
+  <input class="text-input text-input-md" dir="auto" type="email" id="nom" placeholder="Login" required>
+  <input class="text-input text-input-md" dir="auto" type="password" id="mot-de-passe" placeholder="Mot de passe" required>
+  <button class="btn-connect button button-md button-outline button-outline-md button-block button-block-md button-outline-md-light" onclick="loginUser()">Se connecter</button>
+</div>
+</body>
+</html>
